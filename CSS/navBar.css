@@ -1,18 +1,19 @@
 .logo {
-    color: red;
+    color: rgb(34, 35, 133);
     font-size: 25px;
     width: 900px;
     font-weight: bold;
     text-align: center;
 
 }
+
 .navbar{
     position: fixed;
     height: 90px;
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(196, 39, 39, 0.4);
 }
 
 .navbar ul{

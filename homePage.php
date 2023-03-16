@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Księgarnia "Książek"</title>
-    <link rel="stylesheet" href="CSS/divWithNavBar.css">
+    <link rel="stylesheet" href="CSS/navBar.css">
 
 </head>
 <body>
