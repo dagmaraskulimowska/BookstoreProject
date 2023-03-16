@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Księgarnia "Książek"</title>
-    <link rel="stylesheet" href="CSS/navBar.css">
+    <style type="text/css">
+ 	@import url('CSS/navBar.css');
+</style>
 
 </head>
 <body>
-    <nav class="logo h1">
+    <nav class="logo">
       <h1>KSIĄŻEK</h1>
             <nav class="navbar">
                 <ul>
           <li><input type="text" placeholder="Wyszukaj..."></li>
                     <li><a href="homePage.php">Strona główna</a></li>
                     <li><a href="#">Koszyk</a></li>
-                    <li><a href="#">Logowanie</a></li>
+                    <li>
+                    <a href="HTML/login.php">Logowanie</a>
+                </li>
                 </ul>
             </nav>
+        </div>
+
+
+
+<head> 
+    
+<style type="text/css">
+ 	@import url('CSS/menu.css');
+</style>
+</head>
+        <div class = "menu">
+            <ul>
+        <a>Książki</a>
+            <li><a href="#">Fantastyka</a></li>
+                    <li><a href="#">Kryminał</a></li>
+                    <li><a href="#">Reportaż</a></li>
+</ul>
         </div>
 </body>
 </html>
