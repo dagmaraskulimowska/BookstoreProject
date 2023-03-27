@@ -34,7 +34,7 @@
   <div class="w-full max-w-md space-y-8">
     <div>
 
-      <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Zaloguj się do istniejącego konta</h2>
+      <h2>Zaloguj się do istniejącego konta</h2>
       <p class="mt-2 text-center text-sm text-gray-600">
         Chcesz zostać stałym użytkownikiem?
         <p class="mt-2 text-center text-sm text-gray-600"> 

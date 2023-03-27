@@ -12,6 +12,9 @@
     max-width: 500px; /* zmiana maksymalnej szerokości okna */
   padding: 40px; /* zmiana wewnętrznego marginesu okna */
 }
+.login_input[type=text] {
+    border-radius: 5px;
+  }
 
 .remember-me {
     font-size: 15px;
