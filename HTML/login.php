@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Księgarnia "Książek"</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/navBar.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
     <link rel="stylesheet" type="text/css" href="../CSS/loginPage.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/sideBar.css">
 </head>
 <body>
             <nav class="navbar">

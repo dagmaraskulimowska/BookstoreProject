@@ -35,12 +35,12 @@
     margin:auto;
     position:relative;
     width:170px;
-    height:20px;
+    height: 30px;
     border: 4px solid rgba(200, 3, 3, 0.49);
     padding: 0px 10px;
     border-radius: 50px;
     outline:none;
 }
 .navbar input[type=text]::placeholder {
-    color: white;
+    color: black;
   }
