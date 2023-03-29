@@ -21,7 +21,7 @@
         </div>
     <head>
         <style type="text/css">
- 	@import url('../CSS/login.css');
+  @import url('../CSS/login.css');
     </style>
     </head>
     <div class="center">

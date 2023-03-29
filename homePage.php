@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Księgarnia "Książek"</title>
     <style type="text/css">
- 	@import url('CSS/navigationBar.css');
+   @import url('CSS/navigationBar.css');
     @import url('CSS/sideBar.css');
 </style>
 </head>
