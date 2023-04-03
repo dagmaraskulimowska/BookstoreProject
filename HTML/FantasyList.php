@@ -5,6 +5,51 @@
     <title>Księgarnia "Książek"</title>
     <style type="text/css">
  	@import url('../CSS/navigationBar.css');
+    @import url('../CSS/productTable.css');
+    @import url('../CSS/sideBar.css');
+</style>
+</head>
+<body>
+
+<?php
+$database = new mysqli("localhost","BookstoreAdmin","bookstore555","bookstore");
+
+if ($database -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $database -> connect_error;
+  exit();
+}
+
+$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Fantastyka'");
+?>
+
+<nav class="navbar">
+    <ul>
+        <li><input type="text" placeholder="Wyszukaj..."></li>
+        <li><a href="../homePage.php">Strona główna</a></li>
+        <li><a href="#">Koszyk</a></li>
+        <li><a href="HTML/login.php">Logowanie</a></li>
+    </ul>
+</nav>
+
+<div class="grid-container">
+<?php while($row = mysqli_fetch_array($wynik)) { ?>
+    <div class="book">
+        <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
+        <p class="cardmysql">
+            <?php echo $row['Tytuł'] . " " . $row['Cena'] . "zł"; echo "<br>"; ?>
+        </p>
+        <p><button class="btn_addtocart">Dodaj do koszyka</button></p>
+    </div>
+<?php } ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Księgarnia "Książek"</title>
+    <style type="text/css">
+   @import url('CSS/navigationBar.css');
+    @import url('CSS/sideBar.css');
 </style>
 </head>
 <body>
@@ -17,95 +62,30 @@ if ($database -> connect_errno) {
   exit();
 }
 ?>
-
-            <nav class="navbar">
-                <ul>
-          <li><input type="text" placeholder="Wyszukaj..."></li>
-          <li><a href="../homePage.php">Strona główna</a></li>
-                    <li><a href="#">Koszyk</a></li>
-                    <li>
-                    <a href="HTML/login.php">Logowanie</a>
-                </li>
-                </ul>
-            </nav>
         </div>
-<head> 
-
-</head>
-<div class="babel">
-  <img src="https://ecsmedia.pl/c/babel-czyli-o-koniecznosci-przemocy-b-iext126543318.jpg" alt="Babel" style="width:8%">
-    <p class="cardmysql">
-    <?php
-$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE ID =1");
-
-while($row = mysqli_fetch_array($wynik))
-
-if (mysqli_query($database,"SELECT id FROM ksiazki")) {
-
-{echo $row['Tytuł'] . " " . $row['Cena'] . "zł"; echo "<br>"; }
-}
-?>
-
-    </p>
-  <p><button>Dodaj do koszyka</button></p>
+<head>
+<div class="sidebar">
+   <h1>Kategorie</h1>
+   <nav class="menu">
+      <div class="menu-column">
+         <a href="#" class="menu-item is-active">Dla dzieci</a>
+         <a href="HTML/FantasyList.php" class="menu-item">Fantastyka</a>
+         <a href="#" class="menu-item">Thriller/Kryminał</a>
+         <a href="#" class="menu-item">Horror</a>
+      </div>
+      <div class="menu-column">
+         <a href="#" class="menu-item">Literatura piękna</a>
+         <a href="#" class="menu-item">Literatura obyczajowa</a>
+         <a href="#" class="menu-item">Literatura faktu</a>
+         <a href="#" class="menu-item">Rozwój osobisty</a>
+      </div>
+   </nav>
 </div>
-
-<div class="kosiarze">
-  <img src="https://ecsmedia.pl/c/kosiarze-zniwa-smierci-tom-1-b-iext126684420.jpg" alt="kosiarze" style="width:8%">
-    <p class="cardmysql">
-    <?php
-$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE ID =2");
-
-while($row = mysqli_fetch_array($wynik))
-
-if (mysqli_query($database,"SELECT id FROM ksiazki")) {
-
-{echo $row['Tytuł'] . " " . $row['Cena'] . "zł"; echo "<br>"; }
-}
-?>
-    </p>
-  <p><button>Dodaj do koszyka</button></p>
-</div>
-
-<div class="Wszyscyjestesmylotrami">
-  <img src="https://ecsmedia.pl/c/wszyscy-jestesmy-lotrami-villains-tom-1-b-iext126805233.jpg" alt="Wszyscyjestesmylotrami" style="width:8%">
-    <p class="cardmysql">
-    <?php
-$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE ID =3");
-
-while($row = mysqli_fetch_array($wynik))
-
-if (mysqli_query($database,"SELECT id FROM ksiazki")) {
-
-{echo $row['Tytuł'] . " " . $row['Cena'] . "zł"; echo "<br>"; }
-}
-?>
-
-    </p>
-  <p><button>Dodaj do koszyka</button></p>
-</div>
-
-<div class="piataporaroku">
-  <img src="https://ecsmedia.pl/c/piata-pora-roku-peknieta-ziemia-tom-1-b-iext48002542.jpg" alt="piataporaroku" style="width:8%">
-    <p class="cardmysql">
-    <?php
-$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE ID =4");
-
-while($row = mysqli_fetch_array($wynik))
-
-if (mysqli_query($database,"SELECT id FROM ksiazki")) {
-
-{echo $row['Tytuł'] . " " . $row['Cena'] . "zł"; echo "<br>"; }
-}
-mysqli_close($database);
-?>
-    </p>
-  <p><button>Dodaj do koszyka</button></p>
-</div>
-
+</body>
 </html>
-       <main>
+</body>
+</html>
 
-</main> 
+
 </body>
 </html>
