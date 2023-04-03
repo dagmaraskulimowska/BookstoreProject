@@ -19,7 +19,7 @@ if ($database -> connect_errno) {
   exit();
 }
 
-$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Fantastyka'");
+$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Historyczne'");
 ?>
 
 <nav class="navbar">

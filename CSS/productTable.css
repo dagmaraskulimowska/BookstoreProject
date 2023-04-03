@@ -1,0 +1,37 @@
+.grid-container {
+  margin-top: 100px;
+  margin-left: 400px;
+  margin-right: 0px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  justify-items: end;
+  width: 75%;
+  height: 75%;
+}
+
+.book {
+  text-align: center;
+  background-color: rgba(255, 255, 255);
+  border: 6px solid pink;
+  border-radius: 15%;
+  padding: 10px;
+}
+.btn_addtocart{
+  width: 50%;
+  height: 30px;
+  border: 1px solid;
+  background: rgba(196, 39, 39, 0.4);
+  border-radius: 25px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #e9f4fb;
+  cursor: pointer;
+  outline: none;
+  margin-top: 20px;
+}
+.btn_addtocart:hover{
+  border-color: rgba(196, 39, 39, 0.4);
+  background: none;
+  transition: .5s;
+}
