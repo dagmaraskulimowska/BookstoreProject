@@ -11,12 +11,13 @@
 <body>
 
 <?php
-$database = new mysqli("localhost","BookstoreAdmin","bookstore555","bookstore");
+ $database = new mysqli("localhost", "root", "", "bookstore");
 
 if ($database -> connect_errno) {
   echo "Failed to connect to MySQL: " . $database -> connect_error;
   exit();
 }
+$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'");
 ?>
 
             <nav class="navbar">
@@ -35,23 +36,47 @@ if ($database -> connect_errno) {
    <h1>Kategorie</h1>
    <nav class="menu">
       <div class="menu-column">
-         <a href="HTML/ForKids.php" class="menu-item is-active">Dla dzieci</a>
-         <a href="HTML/FantasyList.php" class="menu-item">Fantastyka</a>
-         <a href="HTML/ThrillerCriminal.php" class="menu-item">Thriller/Kryminał</a>
-         <a href="HTML/Horror.php" class="menu-item">Horror</a>
-         <a href="HTML/CommonLiterature.php" class="menu-item">Literatura obyczajowa</a>
-         <a href="HTML/Business.php" class="menu-item">Biznes</a>
+         <a href="HTML/Categories/ForKids.php" class="menu-item is-active">Dla dzieci</a>
+         <a href="HTML/Categories/FantasyList.php" class="menu-item">Fantastyka</a>
+         <a href="HTML/Categories/ThrillerCriminal.php" class="menu-item">Thriller/Kryminał</a>
+         <a href="HTML/Categories/Horror.php" class="menu-item">Horror</a>
+         <a href="HTML/Categories/CommonLiterature.php" class="menu-item">Literatura obyczajowa</a>
+         <a href="HTML/Categories/Business.php" class="menu-item">Biznes</a>
       </div>
       <div class="menu-column">
-         <a href="HTML/BellesLettres.php" class="menu-item">Literatura piękna</a>
-         <a href="HTML/NonFiction.php" class="menu-item">Literatura faktu</a>
-         <a href="HTML/PersonalDevelopment.php" class="menu-item">Rozwój osobisty</a>
-         <a href="HTML/Romance.php" class="menu-item">Romans</a>
-         <a href="HTML/Historical.php" class="menu-item">Historyczne</a>
-         <a href="HTML/Scientific.php" class="menu-item">Naukowe</a>
+         <a href="HTML/Categories/BellesLettres.php" class="menu-item">Literatura piękna</a>
+         <a href="HTML/Categories/NonFiction.php" class="menu-item">Literatura faktu</a>
+         <a href="HTML/Categories/PersonalDevelopment.php" class="menu-item">Rozwój osobisty</a>
+         <a href="HTML/Categories/Romance.php" class="menu-item">Romans</a>
+         <a href="HTML/Categories/Historical.php" class="menu-item">Historyczne</a>
+         <a href="HTML/Categories/Scientific.php" class="menu-item">Naukowe</a>
       </div>
    </nav>
 </div>
+
+<head>
+        <style type="text/css">
+  @import url('CSS/homePage.css');
+  @import url('CSS/productTable.css');
+    </style>
+    </head>
+    <div class="center">
+      <h1>Science week! Tylko do końca tygodnia bestselerowe tytuły naukowe aż 50% taniej!</h1>
+</div>
+
+
+      <div class="grid-container" style="margin-top: 260px">
+<?php while($row = mysqli_fetch_array($wynik)) { ?>
+    <div class="book">
+        <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
+        <p class="cardmysql">
+            <?php echo $row['Tytuł'] . "<br> " . round($row['Cena']*0.5, 2) . "zł"; echo "<br>"; ?>
+        </p>
+        <p><button class="btn_addtocart">Dodaj do koszyka</button></p>
+    </div>
+<?php } ?>
+      </div>
+
 </body>
 </html>
 </body>

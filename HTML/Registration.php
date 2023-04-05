@@ -1,11 +1,10 @@
 <?php
-session_start();
+ $database = new mysqli("localhost", "root", "", "bookstore");
 
-if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){
-  header('Location: panel.php');
+if ($database -> connect_errno) {
+  echo "Failed to connect to MySQL: " . $database -> connect_error;
   exit();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -38,30 +37,25 @@ if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){
     </style>
     </head>
     <div class="center">
-      <h1>Zaloguj się</h1>
-      <form method="post" action="UsersLogin.php">
+      <h1>Zarejestruj się</h1>
+      <form method="post" action="../HTML/addUser.php">
         <div class="txt_field">
           <input type="text" required name="login">
           <span></span>
-          <label>Login</label>
+          <label> Podaj nowy login</label>
         </div>
         <div class="txt_field">
           <input type="password" required name="pass">
           <span></span>
-          <label>Hasło</label>
+          <label>Podaj nowe hasło</label>
         </div>
       
-        <input type="submit" value="Zaloguj się">
+        <input type="submit" value="Stwórz nowe konto">
         <div class="signup_link">
-          Nie posiadasz konta? <a href="../HTML/Registration.php">Zarejestruj się</a>
+         Posiadasz już konto? <a href="../HTML/login.php">Zaloguj się</a>
         </div>
       </form>
-      <?php
-    if(isset($_SESSION['error'])){ //jezeli istnieje zmienna error to ją wypisuje // <div class="pass">Zapomniałeś hasła?</div> 
-      echo '<span style="color: red; font-weight: bold;">'.$_SESSION['error'].'</span>'; 
-      unset($_SESSION['error']);
-    }
-  ?>
+
     </div>
 </body>
 </html>
