@@ -15,7 +15,7 @@ session_start();
                 <ul>
           <li><input type="text" placeholder="Wyszukaj..."></li>
                     <li><a href="../homePage.php">Strona główna</a></li>
-                    <li><a href="#">Koszyk</a></li>
+                    <li><a href="../HTML/cart.php">Koszyk</a></li>
                     <li>
                     <a href="../HTML/login.php">Logowanie</a>
                 </li>
