@@ -70,6 +70,7 @@ if(!isset($_SESSION['koszyk'])) {
                 </table>
                 <div id="return-link-container">
         <a href="../homePage.php">Powrót do strony głównej</a>
+        <a href="../HTML/UsersCartData.php">Zapłać</a>
                 </div>
             </div>
         </div>

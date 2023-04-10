@@ -1,12 +1,3 @@
-<?php
- $database = new mysqli("localhost", "root", "", "bookstore");
-
-if ($database -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $database -> connect_error;
-  exit();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +12,7 @@ if ($database -> connect_errno) {
                 <ul>
           <li><input type="text" placeholder="Wyszukaj..."></li>
                     <li><a href="../homePage.php">Strona główna</a></li>
-                    <li><a href="../HTML/cart.php">Koszyk</a></li>
+                    <li><a href="../html/cart.php">Koszyk</a></li>
                     <li>
                     <a href="../HTML/login.php">Logowanie</a>
                 </li>
@@ -37,60 +28,56 @@ if ($database -> connect_errno) {
     </style>
     </head>
     <div class="center">
-      <h1>Zarejestruj się</h1>
-      <form method="post" action="../HTML/addUser.php">
+      <h1>Wprowadź dane</h1>
+      <form method="post" action="../HTML/addUsersData.php">
         <div class="txt_field">
           <input type="text" required name="login">
           <span></span>
-          <label> Podaj login</label>
+          <label>Imię</label>
         </div>
         <div class="txt_field">
           <input type="password" required name="pass">
           <span></span>
-          <label>Podaj hasło</label>
+          <label>Nazwisko</label>
         </div>
         <div class="txt_field">
-          <input type="text" required name="imie">
+          <input type="password" required name="pass">
           <span></span>
-          <label> Podaj imię</label>
+          <label>Adres</label>
         </div>
         <div class="txt_field">
-          <input type="text" required name="nazwisko">
+          <input type="password" required name="pass">
           <span></span>
-          <label> Podaj nazwisko</label>
+          <label>Miasto</label>
         </div>
         <div class="txt_field">
-          <input type="text" required name="adres">
+          <input type="password" required name="pass">
           <span></span>
-          <label> Podaj Adres</label>
+          <label>Kod pocztowy</label>
         </div>
         <div class="txt_field">
-          <input type="text" required name="kodpocztowy">
+          <input type="password" required name="pass">
           <span></span>
-          <label> Podaj Kod pocztowy</label>
+          <label>Nr tel</label>
         </div>
         <div class="txt_field">
-          <input type="text" required name="miasto">
+          <input type="password" required name="pass">
           <span></span>
-          <label> Podaj Miasto</label>
+          <label>Adres email</label>
         </div>
-        <div class="txt_field">
-          <input type="text" required name="nrtel">
-          <span></span>
-          <label> Podaj Nr tel</label>
-        </div>
-        <div class="txt_field">
-          <input type="text" required name="email">
-          <span></span>
-          <label> Podaj Adres email</label>
-        </div>
+        
       
-        <input type="submit" value="Stwórz nowe konto">
+        <input type="submit" value="Zapłać">
         <div class="signup_link">
-         Posiadasz już konto? <a href="../HTML/login.php">Zaloguj się</a>
+          Nie posiadasz konta? <a href="../HTML/Registration.php">Zarejestruj się</a>
         </div>
       </form>
-
+      <?php
+    if(isset($_SESSION['error'])){ //jezeli istnieje zmienna error to ją wypisuje // <div class="pass">Zapomniałeś hasła?</div> 
+      echo '<span style="color: red; font-weight: bold;">'.$_SESSION['error'].'</span>'; 
+      unset($_SESSION['error']);
+    }
+  ?>
     </div>
 </body>
 </html>
