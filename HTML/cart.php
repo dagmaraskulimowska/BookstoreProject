@@ -69,7 +69,7 @@ if(!isset($_SESSION['koszyk'])) {
                     </tfoot>
                 </table>
                 <div id="return-link-container">
-        <a href="../../homePage.php">Powrót do strony głównej</a>
+        <a href="../homePage.php">Powrót do strony głównej</a>
                 </div>
             </div>
         </div>
