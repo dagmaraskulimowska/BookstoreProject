@@ -24,7 +24,7 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
                 <ul>
           <li><input type="text" placeholder="Wyszukaj..."></li>
                     <li><a href="homePage.php">Strona główna</a></li>
-                    <li><a href="#">Koszyk</a></li>
+                    <li><a href="HTML/Cart.php">Koszyk</a></li>
                     <li>
                     <a href="HTML/login.php">Logowanie</a>
                 </li>
@@ -65,15 +65,20 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
 </div>
 
 
-      <div class="grid-container" style="margin-top: 260px">
-<?php while($row = mysqli_fetch_array($wynik)) { ?>
-    <div class="book">
-        <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
-        <p class="cardmysql">
-            <?php echo $row['Tytuł'] . "<br> " . round($row['Cena']*0.5, 2) . "zł"; echo "<br>"; ?>
-        </p>
-        <p><button class="btn_addtocart">Dodaj do koszyka</button></p>
-    </div>
+<div class="grid-container" style="margin-top: 260px">
+    <?php while($row = mysqli_fetch_array($wynik)) { ?>
+        <div class="book">
+            <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
+            <p class="cardmysql">
+                <?php echo $row['Tytuł'] . "<br> " . round($row['Cena']*0.5, 2) . "zł"; echo "<br>"; ?>
+            </p>
+            <form method="post" action="../BookstoreProject/HTML/addToCart.php">
+                <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
+                <input type="hidden" name="tytul" value="<?php echo $row['Tytuł']; ?>">
+                <input type="hidden" name="cena" value="<?php echo $row['Cena']; ?>">
+                <p><button type="submit" class="btn_addtocart">Dodaj do koszyka</button></p>
+            </form>
+        </div>
 <?php } ?>
       </div>
 
