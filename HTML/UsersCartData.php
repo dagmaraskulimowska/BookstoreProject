@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,59 +21,42 @@
                 </li>
                 </ul>
             </nav>
-        </div>
+        </div>  
 
+        <?php
 
+try {
+    $connection = new mysqli("localhost", "root", "", "logowanie");
+
+    if($connection->connect_errno != 0){
+      throw new Exception(mysqli_connect_errno());
+    }
+    else {
+             if(isset($_SESSION['logon']) && $_SESSION['logon'] == True) {
+              $login = $_SESSION['login'];
+              $reply = mysqli_query($connection, "SELECT * FROM users WHERE login = '$login'");
+            } 
+            else{
+              $_SESSION['error'] = "Proszę się zalogować!";
+              header('Location: login.php');
+              exit();
+            }
+            $connection->close();
+            exit();
+    }
+
+} catch(Exception $e) {
+    echo 'Error occured!';
+}
+?>
 
     <head>
         <style type="text/css">
   @import url('../CSS/login.css');
     </style>
     </head>
-    <div class="center">
-      <h1>Wprowadź dane</h1>
-      <form method="post" action="../HTML/addUsersData.php">
-        <div class="txt_field">
-          <input type="text" required name="login">
-          <span></span>
-          <label>Imię</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required name="pass">
-          <span></span>
-          <label>Nazwisko</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required name="pass">
-          <span></span>
-          <label>Adres</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required name="pass">
-          <span></span>
-          <label>Miasto</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required name="pass">
-          <span></span>
-          <label>Kod pocztowy</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required name="pass">
-          <span></span>
-          <label>Nr tel</label>
-        </div>
-        <div class="txt_field">
-          <input type="password" required name="pass">
-          <span></span>
-          <label>Adres email</label>
-        </div>
-        
-      
         <input type="submit" value="Zapłać">
-        <div class="signup_link">
-          Nie posiadasz konta? <a href="../HTML/Registration.php">Zarejestruj się</a>
-        </div>
+
       </form>
       <?php
     if(isset($_SESSION['error'])){ //jezeli istnieje zmienna error to ją wypisuje // <div class="pass">Zapomniałeś hasła?</div> 

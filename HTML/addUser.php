@@ -18,7 +18,7 @@ try {
       throw new Exception(mysqli_connect_errno());
     }
     else {
-            if($reply = mysqli_query($connection, "INSERT INTO users (id, login, pass, Imie, Nazwisko, Adres, Kodpocztowy, Miasto, Nrtel, Adresemail) VALUES (NULL, '$login', '$hash','$nazwisko', '$adres','$kodpocztowy', '$miasto','$nrtel', '$email')"));
+            if($reply = mysqli_query($connection, "INSERT INTO users (id, login, pass, Imie, Nazwisko, Adres, Kodpocztowy, Miasto, Nrtel, Adresemail) VALUES (NULL, '$login', '$hash', '$imie', '$nazwisko', '$adres', $kodpocztowy, '$miasto', $nrtel, '$email')"));
             $connection->close();
             header('Location: Registration.php');
             exit();
