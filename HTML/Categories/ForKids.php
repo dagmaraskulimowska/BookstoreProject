@@ -4,44 +4,50 @@
     <meta charset="UTF-8">
     <title>Księgarnia "Książek"</title>
     <style type="text/css">
- 	@import url('../../CSS/navigationBar.css');
-    @import url('../../CSS/productTable.css');
-    @import url('../../CSS/sideBar.css');
-</style>
+        @import url('../../CSS/navigationBar.css');
+        @import url('../../CSS/productTable.css');
+        @import url('../../CSS/sideBar.css');
+    </style>
 </head>
 <body>
 
 <?php
- $database = new mysqli("localhost", "root", "", "bookstore");
+    // Połączenie z bazą danych
+    $database = new mysqli("localhost", "root", "", "bookstore");
 
-if ($database -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $database -> connect_error;
-  exit();
-}
+    if ($database -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $database -> connect_error;
+        exit();
+    }
 
-$wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Dla dzieci'");
+    // Zapytanie do bazy danych
+    $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Dla dzieci'");
 ?>
 
 <nav class="navbar">
     <ul>
-    <li><input type="text" placeholder="Wyszukaj..."></li>
+        <li><input type="text" placeholder="Wyszukaj..."></li>
         <li><a href="../../homePage.php">Strona główna</a></li>
-        <li><a href="#">Koszyk</a></li>
+        <li><a href="../../HTML/cart.php">Koszyk</a></li>
         <li><a href="../../HTML/login.php">Logowanie</a></li>
     </ul>
 </nav>
 
 <div class="grid-container">
-<?php while($row = mysqli_fetch_array($wynik)) { ?>
-    <div class="book">
-        <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
-        <p class="cardmysql">
-            <?php echo $row['Tytuł'] . "<br> " . $row['Cena'] . "zł"; echo "<br>"; ?>
-        </p>
-        <p><button class="btn_addtocart">Dodaj do koszyka</button></p>
-    </div>
-<?php }
- ?>
+    <?php while($row = mysqli_fetch_array($wynik)) { ?>
+        <div class="book">
+            <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
+            <p class="cardmysql">
+                <?php echo $row['Tytuł'] . "<br> " . $row['Cena'] . "zł"; echo "<br>"; ?>
+            </p>
+            <form method="post" action="../addToCart.php">
+                <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
+                <input type="hidden" name="tytul" value="<?php echo $row['Tytuł']; ?>">
+                <input type="hidden" name="cena" value="<?php echo $row['Cena']; ?>">
+                <p><button type="submit" class="btn_addtocart">Dodaj do koszyka</button></p>
+            </form>
+        </div>
+    <?php } ?>
 
 <!DOCTYPE html>
 <html lang="en">

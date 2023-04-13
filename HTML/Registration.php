@@ -21,7 +21,7 @@ if ($database -> connect_errno) {
                 <ul>
           <li><input type="text" placeholder="Wyszukaj..."></li>
                     <li><a href="../homePage.php">Strona główna</a></li>
-                    <li><a href="#">Koszyk</a></li>
+                    <li><a href="../HTML/cart.php">Koszyk</a></li>
                     <li>
                     <a href="../HTML/login.php">Logowanie</a>
                 </li>
@@ -42,12 +42,47 @@ if ($database -> connect_errno) {
         <div class="txt_field">
           <input type="text" required name="login">
           <span></span>
-          <label> Podaj nowy login</label>
+          <label> Podaj login</label>
         </div>
         <div class="txt_field">
           <input type="password" required name="pass">
           <span></span>
-          <label>Podaj nowe hasło</label>
+          <label>Podaj hasło</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required name="imie">
+          <span></span>
+          <label> Podaj imię</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required name="nazwisko">
+          <span></span>
+          <label> Podaj nazwisko</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required name="adres">
+          <span></span>
+          <label> Podaj Adres</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required name="kodpocztowy">
+          <span></span>
+          <label> Podaj Kod pocztowy</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required name="miasto">
+          <span></span>
+          <label> Podaj Miasto</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required name="nrtel">
+          <span></span>
+          <label> Podaj Nr tel</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" required name="email">
+          <span></span>
+          <label> Podaj Adres email</label>
         </div>
       
         <input type="submit" value="Stwórz nowe konto">
