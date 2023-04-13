@@ -1,32 +1,31 @@
 <?php
-require "../vendor/autoload.php";
-
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-$subject = "Potwierdzenie płatności";
-$to = "dagaskul@wp.pl";
-$email = "dagmaraskul@wp.pl";
-$message = "121342453453";
-$name = "Dagmara";
+require '../vendor/phpmailer/phpmailer/src/Exception.php';
+require '../vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require '../vendor/phpmailer/phpmailer/src/SMTP.php';
 
-$mail = new PHPMailer(true);
-$mail->isSMTP();
-$mail->SMTPAuth = true;
 
-$mail->Host = "smtp.example.com";
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$mail->Port = 587;
+    $name = "Ksiegarnia Ksiazek";
+    $email = "ksiegarniaksiazek@gmail.com";
+    $subject = "Dagmara i Tomek";
+    $message = file_get_contents("mailTemplate.php");
 
-$mail->Username = "you@example.com";
-$mail->Password = "password";
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'ksiegarniaksiazek@gmail.com';
+    $mail->Password = 'cygikokgsxcgqzzd';
+    $mail->Port = 465;
+    $mail->SMTPSecure = 'ssl';
+    $mail->isHTML(true);
+    $mail->setFrom($email, $name);
+    $mail->addAddress('dagaskul@wp.pl');
+    $mail->Subject = ("$email ($subject)");
+    $mail->Body = $message;
+    $mail->send();
 
-$mail->setFrom($email, $name);
-$mail->addAddress("dagaskul@wp.pl", "Dagmara12345");
-$mail->Subject = $subject;
-$mail->Body = $message;
-$mail->send();
-
-echo "email sent";
-
+    header("Location: ./response.php");
 ?>
