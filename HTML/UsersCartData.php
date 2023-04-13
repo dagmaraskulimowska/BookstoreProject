@@ -59,25 +59,25 @@ try {
               echo '<form>';
               echo '<label for="Imie">Imię:</label>';
               echo '<div class="txt_field">';
-              echo '<input type="text" id="Imie" name="Imie" value="' . $row['Imie'] . '"><br></div>'; // tu dodajemy zamknięcie div
+              echo '<input type="text" id="Imie" name="Imie" value="' . $row['Imie'] . '"><br></div>';
               echo '<label for="Nazwisko">Nazwisko:</label>';
               echo '<div class="txt_field">';
-              echo '<input type="text" id="Nazwisko" name="Nazwisko" value="' . $row['Nazwisko'] . '"><br></div>'; // tu dodajemy zamknięcie div
+              echo '<input type="text" id="Nazwisko" name="Nazwisko" value="' . $row['Nazwisko'] . '"><br></div>';
               echo '<label for="Adres">Adres:</label>';
               echo '<div class="txt_field">';
-              echo '<input type="text" id="Adres" name="Adres" value="' . $row['Adres'] . '"><br></div>'; // tu dodajemy zamknięcie div
+              echo '<input type="text" id="Adres" name="Adres" value="' . $row['Adres'] . '"><br></div>'; 
               echo '<label for="Kodpocztowy">Kod pocztowy:</label>';
               echo '<div class="txt_field">';
-              echo '<input type="text" id="Kodpocztowy" name="Kodpocztowy" value="' . $row['Kodpocztowy'] . '"><br></div>'; // tu dodajemy zamknięcie div
+              echo '<input type="text" id="Kodpocztowy" name="Kodpocztowy" value="' . $row['Kodpocztowy'] . '"><br></div>'; 
               echo '<label for="Miasto">Miasto:</label>';
               echo '<div class="txt_field">';
-              echo '<input type="text" id="Miasto" name="Miasto" value="' . $row['Miasto'] . '"><br></div>'; // tu dodajemy zamknięcie div
+              echo '<input type="text" id="Miasto" name="Miasto" value="' . $row['Miasto'] . '"><br></div>'; 
               echo '<label for="Nrtel">Numer telefonu:</label>';
               echo '<div class="txt_field">';
-              echo '<input type="text" id="Nrtel" name="Nrtel" value="' . $row['Nrtel'] . '"><br></div>'; // tu dodajemy zamknięcie div
+              echo '<input type="text" id="Nrtel" name="Nrtel" value="' . $row['Nrtel'] . '"><br></div>'; 
               echo '<label for="Adresemail">Adres email:</label>';
               echo '<div class="txt_field">';
-              echo '<input type="text" id="Adresemail" name="Adresemail" value="' . $row['Adresemail'] . '"><br></div>'; // tu dodajemy zamknięcie div
+              echo '<input type="text" id="Adresemail" name="Adresemail" value="' . $row['Adresemail'] . '"><br></div>'; 
               echo '</form>';
             }
             $connection->close();
