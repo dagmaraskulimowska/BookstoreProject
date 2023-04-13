@@ -30,7 +30,9 @@ session_start();
         <a href="../HTML/cart.php">Powrót do koszyka</a>
                 </div>
 <div id="payment-link-container">
-        <a href="#">Przejdź do płatności</a>
+      <form method="post" action="../HTML/sendEmail.php">
+          <input type="submit" value="Potwierdź płatność">
+          
                 </div>
 </body> 
 
