@@ -91,26 +91,14 @@ input[type="submit"]:hover{
   transition: .5s;
 }
 
-#return-link-container {
-  clear: both;
-  margin-top: 5em;
-  margin-left: 20%;
+#link-container {
+  margin-top: 42%;
 }
-#return-link-container a {
+
+#link-container a {
   display: block;
   margin: 20px auto;
-  font-size: 18px;
-  color: rgba(196, 39, 39, 0.523);
-  text-decoration: none;
-}
-#payment-link-container {
-  clear: both;
-  margin-left: 50%;
-  margin-top: -2em;
-}
-#payment-link-container a {
-  display: block;
-  margin: 20px auto;
+  text-align: center;
   font-size: 18px;
   color: rgba(196, 39, 39, 0.523);
   text-decoration: none;

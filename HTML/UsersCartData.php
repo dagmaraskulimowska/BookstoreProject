@@ -22,17 +22,9 @@ session_start();
                 </li>
                 </ul>
             </nav>
-        </div> 
-        <div class="center">
-  <a href="../html/cart.php" class="back-link">Powrót do koszyka</a>
-</div>
-<div id="return-link-container">
+            <div id="link-container">
         <a href="../HTML/cart.php">Powrót do koszyka</a>
-                </div>
-<div id="payment-link-container">
-      <form method="post" action="../HTML/sendEmail.php">
-          <input type="submit" value="Potwierdź płatność">
-          
+        <a href="../HTML/sendEmail.php">Przejdź do płatności</a>
                 </div>
 </body> 
 
@@ -90,5 +82,6 @@ try {
     echo 'Error occured!';
 }
 ?>
+
     </div>
 </html>
