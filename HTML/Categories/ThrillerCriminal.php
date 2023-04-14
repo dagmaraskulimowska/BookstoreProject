@@ -7,6 +7,10 @@
         @import url('../../CSS/navigationBar.css');
         @import url('../../CSS/productTable.css');
         @import url('../../CSS/sideBar.css');
+        a {
+        color: black;
+        text-decoration: none;
+    }
     </style>
 </head>
 <body>
@@ -20,7 +24,7 @@
         exit();
     }
 
-    // Zapytanie do bazy danych
+    // Zapytanie do bazy danychs
     $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Thriller/Kryminał'");
 ?>
 
@@ -36,17 +40,19 @@
 <div class="grid-container">
     <?php while($row = mysqli_fetch_array($wynik)) { ?>
         <div class="book">
-            <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
-            <p class="cardmysql">
-                <?php echo $row['Tytuł'] . "<br> " . $row['Cena'] . "zł"; echo "<br>"; ?>
-            </p>
-            <form method="post" action="../addToCart.php">
-                <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
-                <input type="hidden" name="tytul" value="<?php echo $row['Tytuł']; ?>">
-                <input type="hidden" name="cena" value="<?php echo $row['Cena']; ?>">
-                <p><button type="submit" class="btn_addtocart">Dodaj do koszyka</button></p>
-            </form>
-        </div>
+  <a href="../productPage.php?id=<?php echo $row['ID']; ?>">
+    <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
+    <p class="cardmysql">
+      <?php echo $row['Tytuł'] . "<br> " . $row['Cena'] . "zł"; echo "<br>"; ?>
+    </p>
+  </a>
+  <form method="post" action="../addToCart.php">
+    <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
+    <input type="hidden" name="tytul" value="<?php echo $row['Tytuł']; ?>">
+    <input type="hidden" name="cena" value="<?php echo $row['Cena']; ?>">
+    <p><button type="submit" class="btn_addtocart">Dodaj do koszyka</button></p>
+  </form>
+</div>
     <?php } ?>
 
 <!DOCTYPE html>
