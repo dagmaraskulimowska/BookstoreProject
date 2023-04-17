@@ -72,6 +72,7 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
 <div class="grid-container" style = "margin-top: 260px">
     <?php while($row = mysqli_fetch_array($wynik)) { ?>
         <div class="book">
+
   <a href="../BookstoreProject/HTML/productPage.php?id=<?php echo $row['ID']; ?>">
     <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
     <p class="cardmysql">
@@ -85,6 +86,7 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
     <p><button type="submit" class="btn_addtocart">Dodaj do koszyka</button></p>
   </form>
 </div>
+
 <?php } ?>
       </div>
 

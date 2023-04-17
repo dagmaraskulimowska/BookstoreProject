@@ -75,7 +75,7 @@ session_start();
     ?>
     </div>
 <footer>
-    <p>2023 Księgarnia "Książek"</p>
+    <p> 2023 Księgarnia "Książek"</p>
 </footer>
 </body>
 </html>
