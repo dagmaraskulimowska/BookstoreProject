@@ -77,6 +77,5 @@ session_start();
 <footer>
     <p> 2023 Księgarnia "Książek"</p>
 </footer>
-
 </body>
 </html>

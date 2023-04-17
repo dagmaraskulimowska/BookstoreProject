@@ -17,9 +17,9 @@ if(isset($_POST['id']) && isset($_POST['tytul']) && isset($_POST['cena'])) {
 
     // Szukamy produktu o takim samym id w koszyku
     $produkt_juz_w_koszyku = false;
-    foreach($_SESSION['koszyk'] as &$produkt) {
+    foreach($_SESSION['koszyk'] as $key => $produkt) {
         if($produkt['id'] == $id) {
-            $produkt['ilosc']++;
+            $_SESSION['koszyk'][$key]['ilosc']++;
             $produkt_juz_w_koszyku = true;
             break;
         }
