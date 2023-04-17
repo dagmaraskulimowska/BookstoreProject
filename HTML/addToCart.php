@@ -15,15 +15,26 @@ if(isset($_POST['id']) && isset($_POST['tytul']) && isset($_POST['cena'])) {
         $_SESSION['koszyk'] = array();
     }
 
-    // Dodanie produktu do koszyka
-    $produkt = array(
-        'id' => $id,
-        'tytul' => $tytul,
-        'cena' => $cena,
-        'ilosc' => 1
-    );
+    // Szukamy produktu o takim samym id w koszyku
+    $produkt_juz_w_koszyku = false;
+    foreach($_SESSION['koszyk'] as &$produkt) {
+        if($produkt['id'] == $id) {
+            $produkt['ilosc']++;
+            $produkt_juz_w_koszyku = true;
+            break;
+        }
+    }
 
-    array_push($_SESSION['koszyk'], $produkt);
+    // Jeśli produktu nie ma w koszyku, dodajemy go
+    if(!$produkt_juz_w_koszyku) {
+        $produkt = array(
+            'id' => $id,
+            'tytul' => $tytul,
+            'cena' => $cena,
+            'ilosc' => 1
+        );
+        array_push($_SESSION['koszyk'], $produkt);
+    }
 
     // Przekierowanie użytkownika na stronę koszyka
     header('Location: Cart.php');

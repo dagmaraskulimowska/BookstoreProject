@@ -1,0 +1,67 @@
+/* Stylowanie kontenera produktu */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 13%;
+    margin-left: 15%;
+  }
+  
+  .product-image {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .product-image img {
+    width: 250px; /* lub dowolna inna wartoÅ›Ä‡ */
+    height: auto;
+  }
+  
+  .product-details {
+    width: 400px;
+  }
+  
+  .product-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .product-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p {
+    margin-bottom: 5px;
+  }
+  
+  .product-details strong {
+    font-weight: bold;
+  }
+  
+  .btn_addtocart{
+    width: 50%;
+    height: 30px;
+    border: 1px solid;
+    background: rgba(196, 39, 39, 0.4);
+    border-radius: 25px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #e9f4fb;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+  }
+  .btn_addtocart:hover{
+    border-color: rgba(196, 39, 39, 0.4);
+    background: none;
+    transition: .5s;
+  }
+  
+  /* Stylowanie stopki */
+  footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 5%;
+  }

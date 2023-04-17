@@ -70,7 +70,7 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
         <div class="book">
             <img src="<?php echo $row['Okładka']; ?>" alt="<?php echo $row['Tytuł']; ?>" style="width:30%">
             <p class="cardmysql">
-                <?php echo $row['Tytuł'] . "<br> " . round($row['Cena']*0.5, 2) . "zł"; echo "<br>"; ?>
+                <?php echo $row['Tytuł'] . "<br> " . $row['Cena'] . "zł"; echo "<br>"; ?>
             </p>
             <form method="post" action="../BookstoreProject/HTML/addToCart.php">
                 <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">

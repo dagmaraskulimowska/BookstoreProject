@@ -44,3 +44,7 @@
 .navbar input[type=text]::placeholder {
     color: black;
   }
+  a {
+    text-decoration: none;
+    color: black;
+  }
