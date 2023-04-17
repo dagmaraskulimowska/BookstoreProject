@@ -75,9 +75,7 @@ session_start();
     ?>
     </div>
 <footer>
-    <p>&copy; 2023 Księgarnia "Książek"</p>
+    <p>2023 Księgarnia "Książek"</p>
 </footer>
-<script src="../JS/navigationBar.js"></script>
-<script src="../JS/productPage.js"></script>
 </body>
 </html>
