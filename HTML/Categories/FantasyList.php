@@ -30,7 +30,12 @@
 
 <nav class="navbar">
     <ul>
-        <li><input type="text" placeholder="Wyszukaj..."></li>
+    <li>
+            <form action="../SearchBar.php" method="get">
+                <input type="text" name="search" placeholder="Wyszukaj...">
+               
+            </form>
+        </li>
         <li><a href="../../homePage.php">Strona główna</a></li>
         <li><a href="../../HTML/cart.php">Koszyk</a></li>
         <li><a href="../../HTML/login.php">Logowanie</a></li>

@@ -20,7 +20,12 @@ if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){
 <body>
             <nav class="navbar">
                 <ul>
-          <li><input type="text" placeholder="Wyszukaj..."></li>
+                <li>
+            <form action="../HTML/SearchBar.php" method="get">
+                <input type="text" name="search" placeholder="Wyszukaj...">
+               
+            </form>
+        </li>
                     <li><a href="../homePage.php">Strona główna</a></li>
                     <li><a href="../html/cart.php">Koszyk</a></li>
                     <li>

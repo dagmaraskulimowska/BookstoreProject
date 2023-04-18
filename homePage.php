@@ -26,11 +26,15 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
 
             <nav class="navbar">
                 <ul>
-          <li><input type="text" placeholder="Wyszukaj..."></li>
-                    <li><a href="homePage.php">Strona główna</a></li>
+                <li>
+            <form action="HTML/SearchBar.php" method="get">
+                <input type="text" name="search" placeholder="Wyszukaj...">
+               
+            </form>
+        </li>
+        <li><a href="homePage.php">Strona główna</a></li>
                     <li><a href="HTML/Cart.php">Koszyk</a></li>
-                    <li>
-                    <a href="HTML/login.php">Logowanie</a>
+                   <li> <a href="HTML/login.php">Logowanie</a> </li>
                 </li>
                 </ul>
             </nav>
