@@ -5,6 +5,7 @@
     <title>Księgarnia "Książek"</title>
     <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
     <link rel="stylesheet" type="text/css" href="../CSS/productPage.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/searchbar.css">
 </head>
 <body>
     <nav class="navbar">

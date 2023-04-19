@@ -11,6 +11,11 @@
         color: black;
         text-decoration: none;
     }
+    body {
+        background-image: url('https://scontent-waw1-1.xx.fbcdn.net/v/t1.15752-9/339476106_1356152564954448_8562563869027805240_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=y-GSVctHYAkAX98piHa&_nc_ht=scontent-waw1-1.xx&oh=03_AdSD4AhiVU1yJY5c6DQW6hTiZyEGXPqNTC4bfYjYRmaIzw&oe=64671FEE');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     </style>
 </head>
 <body>

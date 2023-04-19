@@ -10,6 +10,9 @@
         color: black;
         text-decoration: none;
     }
+    center{
+      text-align: center;
+    }
 </style>
 </head>
 <body>
@@ -69,7 +72,8 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
     </style>
     </head>
     <div class="center">
-      <h1>Science week! Tylko do końca tygodnia bestselerowe tytuły naukowe aż 50% taniej!</h1>
+      <h1>Science week!<h1>
+        <h1>Tylko do końca tygodnia bestselerowe tytuły naukowe aż 50% taniej!</h1>
 </div>
 
 
