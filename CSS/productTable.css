@@ -17,6 +17,7 @@
   border: 6px solid pink;
   border-radius: 15%;
   padding: 10px;
+  background: rgba(255, 255, 255, 0.4);
 }
 .btn_addtocart{
   width: 50%;
