@@ -1,4 +1,4 @@
-  body{
+body {
   background: url(https://scontent-waw1-1.xx.fbcdn.net/v/t1.15752-9/339476106_1356152564954448_8562563869027805240_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=ae9488&_nc_ohc=y-GSVctHYAkAX98piHa&_nc_ht=scontent-waw1-1.xx&oh=03_AdSD4AhiVU1yJY5c6DQW6hTiZyEGXPqNTC4bfYjYRmaIzw&oe=64671FEE) no-repeat center center fixed;
   background-size: cover;
   margin: 0;
@@ -6,31 +6,36 @@
   height: 100vh;
   overflow: hidden;
 }
-.center{
+
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
+  max-width: 400px;
+  width: 90%;
   background: rgb(255, 255, 255);
   border-radius: 10px;
-  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
 }
-.center h1{
+
+.center h1 {
   text-align: center;
   padding: 20px 0;
   border-bottom: 1px solid silver;
 }
-.center form{
+
+.center form {
   padding: 0 40px;
   box-sizing: border-box;
 }
-form .txt_field{
+
+form .txt_field {
   position: relative;
-  border-bottom: 2px solid #adadad;
   margin: 30px 0;
 }
-.txt_field input{
+
+.txt_field input {
   width: 100%;
   padding: 0 5px;
   height: 40px;
@@ -38,8 +43,10 @@ form .txt_field{
   border: none;
   background: none;
   outline: none;
+  border-bottom: 2px solid #adadad;
 }
-.txt_field label{
+
+.txt_field label {
   position: absolute;
   top: 50%;
   left: 5px;
@@ -49,7 +56,8 @@ form .txt_field{
   pointer-events: none;
   transition: .5s;
 }
-.txt_field span::before{
+
+.txt_field span::before {
   content: '';
   position: absolute;
   top: 40px;
@@ -59,21 +67,25 @@ form .txt_field{
   background: rgba(196, 39, 39, 0.4);
   transition: .5s;
 }
+
 .txt_field input:focus ~ label,
-.txt_field input:valid ~ label{
+.txt_field input:valid ~ label {
   top: -5px;
-  color: rgba(196, 39, 39, 0.4);;
+  color: rgba(196, 39, 39, 0.4);
 }
+
 .txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before{
+.txt_field input:valid ~ span::before {
   width: 100%;
 }
-.pass{
+
+.pass {
   margin: -5px 0 20px 5px;
   color: #a6a6a6;
   cursor: pointer;
 }
-.pass:hover{
+
+.pass:hover {
   text-decoration: underline;
 }
 input[type="submit"]{
@@ -104,4 +116,9 @@ input[type="submit"]:hover{
 }
 .signup_link a:hover{
   text-decoration: underline;
+}
+.center-link {
+  display: block; /* Ustawia element na blokowy, aby móc stosować marginesy */
+  text-align: center; /* Wyśrodkowuje tekst w poziomie */
+  margin-top: 20px; /* Daje margines od góry */
 }

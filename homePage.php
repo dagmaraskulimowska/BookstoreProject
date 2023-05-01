@@ -1,7 +1,13 @@
+<?php
+  require_once '../BookstoreProject/HTML/logger.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Dagmara Skulimowska, Tomasz Barczycki">
+    <meta name="description" content="Strona internetowa księgarni, możliwość zakupu produktów z asortymentu księgarni">
+    <meta name="keywords" content="Księgarnia Książek, księgarnia, książki, bookstore, lektury, Wojna Makowa">
     <title>Księgarnia "Książek"</title>
     <style type="text/css">
    @import url('CSS/navigationBar.css');
@@ -77,7 +83,7 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
 </div>
 
 
-<div class="grid-container" style = "margin-top: 260px">
+<div class="grid-container" style = "margin-top: 20%">
     <?php while($row = mysqli_fetch_array($wynik)) { ?>
         <div class="book">
 

@@ -1,13 +1,16 @@
 <?php
 
 session_start();
-
+require_once '../HTML/logger.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Dagmara Skulimowska, Tomasz Barczycki">
+    <meta name="description" content="Strona internetowa księgarni, możliwość zakupu produktów z asortymentu księgarni">
+    <meta name="keywords" content="Księgarnia Książek, księgarnia, książki, bookstore, lektury, Wojna Makowa">
     <title>Księgarnia "Książek"</title>
     <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
     <link rel="stylesheet" type="text/css" href="../CSS/productPage.css">
@@ -56,7 +59,7 @@ session_start();
             echo "<h2>" . $row['Tytuł'] . "</h2>";
             echo "<h3>" . $row['Autor'] . "</h3>";
             echo "<p><strong>Wydawnictwo:</strong> " . $row['Wydawnictwo'] . "</p>";
-            echo "<p><strong>Liczba stron:</strong> " . $row['Liczba stron'] . "</p>";
+            echo "<p><strong>Liczba stron:</strong> " . $row['Liczbastron'] . "</p>";
             if (!empty($row['Seria'])) {
                 echo "<p><strong>Seria:</strong> " . $row['Seria'] . "</p>";
                 echo "<p><strong>Tom:</strong> " . $row['Tom'] . "</p>";

@@ -6,6 +6,7 @@ if(!isset($_SESSION['koszyk'])) {
     $_SESSION['koszyk'] = array();
 }
 
+  require_once '../HTML/logger.php';
 ?>
 
 <!DOCTYPE html>
