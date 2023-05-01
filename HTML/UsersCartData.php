@@ -5,6 +5,9 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="author" content="Dagmara Skulimowska, Tomasz Barczycki">
+    <meta name="description" content="Strona internetowa księgarni, możliwość zakupu produktów z asortymentu księgarni">
+    <meta name="keywords" content="Księgarnia Książek, księgarnia, książki, bookstore, lektury, Wojna Makowa">
     <title>Księgarnia "Książek"</title>
     <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
     <link rel="stylesheet" type="text/css" href="../CSS/sideBar.css">

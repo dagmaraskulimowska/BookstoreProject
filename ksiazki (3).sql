@@ -44,7 +44,7 @@ CREATE TABLE `ksiazki` (
 -- Zrzut danych tabeli `ksiazki`
 --
 
-INSERT INTO `ksiazki` (`Okładka`, `Tytuł`, `Autor`, `Wydawnictwo`, `Liczba stron`, `Seria`, `Tom`, `Gatunek`, `Cena`, `ID`) VALUES
+INSERT INTO `ksiazki` (`Okładka`, `Tytuł`, `Autor`, `Wydawnictwo`, `Liczbastron`, `Seria`, `Tom`, `Gatunek`, `Cena`, `ID`) VALUES
 ('https://ecsmedia.pl/c/babel-czyli-o-koniecznosci-przemocy-b-iext126543318.jpg', 'Babel czyli o konieczności przemocy', 'Rebecca Kuang', 'Fabryka Słów', 899, NULL, NULL, 'Fantastyka', 99.99, 1),
 ('https://ecsmedia.pl/c/kosiarze-zniwa-smierci-tom-1-w-iext126684420.jpg', 'Kosiarze', 'Neal Shusterman', 'Uroboros', 512, 'Żniwa Śmierci', 1, 'Fantastyka', 54.99, 2),
 ('https://ecsmedia.pl/c/wszyscy-jestesmy-lotrami-villains-tom-1-w-iext126805233.jpg', 'Wszyscy jesteśmy łotrami', 'Foody Amanda, Herman Christine Lynn', 'Young', 520, 'Villains', 1, 'Fantastyka', 49.99, 3),
