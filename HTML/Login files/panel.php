@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once '../HTML/logger.php';
+require_once '../logger.php';
 
 ?>
 <!DOCTYPE html>
