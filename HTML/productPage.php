@@ -12,8 +12,8 @@ require_once '../HTML/logger.php';
     <meta name="description" content="Strona internetowa księgarni, możliwość zakupu produktów z asortymentu księgarni">
     <meta name="keywords" content="Księgarnia Książek, księgarnia, książki, bookstore, lektury, Wojna Makowa">
     <title>Księgarnia "Książek"</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/productPage.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/navigationBar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/productPage.css">
 </head>
 <body>
     <nav class="navbar">
@@ -24,8 +24,8 @@ require_once '../HTML/logger.php';
                
             </form>
         </li>
-            <li><a href="../homePage.php">Strona główna</a></li>
-            <li><a href="../Cart.php">Koszyk</a></li>
+            <li><a href="..././homePage.php">Strona główna</a></li>
+            <li><a href="../HTML/Cart files/cart.php">Koszyk</a></li>
             <?php
             // Wyświetlanie odpowiedniego linku w zależności od stanu sesji (zalogowany/nie zalogowany)
             if(isset($_SESSION['username'])) {

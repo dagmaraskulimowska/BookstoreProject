@@ -1,11 +1,14 @@
-<?php
- $database = new mysqli("localhost", "root", "", "bookstore");
 
-if ($database -> connect_errno) {
-  echo "Failed to connect to MySQL: " . $database -> connect_error;
-  exit();
+<?php
+require_once '../connection.php';
+
+class Registration extends connection {
+
+  public function __construct() {
+    parent::__construct();
+  }
+
 }
-require_once '../HTML/logger.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,9 +19,9 @@ require_once '../HTML/logger.php';
     <meta name="description" content="Strona internetowa księgarni, możliwość zakupu produktów z asortymentu księgarni">
     <meta name="keywords" content="Księgarnia Książek, księgarnia, książki, bookstore, lektury, Wojna Makowa">
     <title>Księgarnia "Książek"</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/loginPage.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/sideBar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/navigationBar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/loginPage.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/sideBar.css">
 </head>
 <body>
             <nav class="navbar">
@@ -29,11 +32,9 @@ require_once '../HTML/logger.php';
                
             </form>
         </li>
-                    <li><a href="../homePage.php">Strona główna</a></li>
-                    <li><a href="../HTML/cart.php">Koszyk</a></li>
-                    <li>
-                    <a href="../HTML/login.php">Logowanie</a>
-                </li>
+        <li><a href="../../homePage.php">Strona główna</a></li>
+        <li><a href="../Cart files/cart.php">Koszyk</a></li>
+        <li><a href="../Login files/login.php">Logowanie</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,12 +43,12 @@ require_once '../HTML/logger.php';
 
     <head>
         <style type="text/css">
-  @import url('../CSS/login.css');
+  @import url('../../CSS/login.css');
     </style>
     </head>
     <div class="center">
       <h1>Zarejestruj się</h1>
-      <form method="post" action="../HTML/addUser.php">
+      <form method="post" action="../Login files/addUser.php">
         <div class="txt_field">
           <input type="text" required name="login">
           <span></span>
@@ -96,7 +97,7 @@ require_once '../HTML/logger.php';
       
         <input type="submit" value="Stwórz nowe konto">
         <div class="signup_link">
-         Posiadasz już konto? <a href="../HTML/login.php">Zaloguj się</a>
+         Posiadasz już konto? <a href="../Login files/login.php">Zaloguj się</a>
         </div>
       </form>
 

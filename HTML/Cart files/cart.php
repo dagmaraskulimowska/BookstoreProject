@@ -6,29 +6,29 @@ if(!isset($_SESSION['koszyk'])) {
     $_SESSION['koszyk'] = array();
 }
 
-  require_once '../HTML/logger.php';
+require_once '../logger.php';
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Twój koszyk</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/cart.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/navigationBar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/cart.css">
 </head>
 <body>
 
 <nav class="navbar">
     <ul>
     <li>
-            <form action="../HTML/SearchBar.php" method="get">
+    <form action="../SearchBar.php" method="get">
                 <input type="text" name="search" placeholder="Wyszukaj...">
                
             </form>
         </li>
-        <li><a href="../homePage.php">Strona główna</a></li>
-        <li><a href="../HTML/Cart.php">Koszyk</a></li>
-        <li><a href="../HTML/login.php">Logowanie</a></li>
+        <li><a href="../../homePage.php">Strona główna</a></li>
+        <li><a href="../Cart files/cart.php">Koszyk</a></li>
+        <li><a href="../Login files/login.php">Logowanie</a></li>
     </ul>
 </nav>
 
@@ -56,7 +56,7 @@ if(!isset($_SESSION['koszyk'])) {
           <td><?php echo $produkt['cena']; ?></td>
           <td><?php echo $produkt['ilosc']; ?></td>
           <td>
-            <form method="POST" action="removeFromCart.php">
+            <form method="POST" action="../Cart files/removeFromCart.php">
               <input type="hidden" name="id" value="<?php echo $produkt['id']; ?>">
               <button type="submit">Usuń</button>
             </form>
@@ -91,8 +91,8 @@ if(!isset($_SESSION['koszyk'])) {
       </tfoot>
     </table>
     <div id="return-link-container">
-      <a href="../homePage.php">Powrót do strony głównej</a>
-      <a href="../HTML/UsersCartData.php">Zapłać</a>
+      <a href="../../homePage.php">Powrót do strony głównej</a>
+      <a href="../Cart files/UsersCartData.php">Zapłać</a>
     </div>
   </div>
 </div>

@@ -49,7 +49,7 @@ try {
         }
     } else {
         $_SESSION['error'] = "Proszę się zalogować!";
-        header('Location: login.php');
+        header('Location: ../Login files/login.php');
         exit();
     }
 
@@ -69,9 +69,9 @@ try {
     <meta name="description" content="Strona internetowa księgarni, możliwość zakupu produktów z asortymentu księgarni">
     <meta name="keywords" content="Księgarnia Książek, księgarnia, książki, bookstore, lektury, Wojna Makowa">
     <title>Księgarnia "Książek"</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/sideBar.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/usersCartData.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/navigationBar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/sideBar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/usersCartData.css">
 </head>
 <body>
 
@@ -83,16 +83,16 @@ try {
                
             </form>
         </li>
-                    <li><a href="../homePage.php">Strona główna</a></li>
-                    <li><a href="../html/cart.php">Koszyk</a></li>
-                    <li>
-                    <a href="../HTML/login.php">Logowanie</a>
+        <li><a href="../../homePage.php">Strona główna</a></li>
+        <li><a href="../Cart files/cart.php">Koszyk</a></li>
+        <li><a href="../Login files/login.php">Logowanie</a></li>
+
                 </li>
                 </ul>
             </nav>
             <div id="link-container">
-        <a href="../HTML/cart.php">Powrót do koszyka</a>
-        <a href="../HTML/sendEmail.php">Przejdź do płatności</a>
+            <a href="../Cart files/cart.php">Powrót do koszyka</a>
+        <a href="../Mail files/sendEmail.php">Przejdź do płatności</a>
                 </div>
 </body> 
 

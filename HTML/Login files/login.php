@@ -5,7 +5,7 @@ if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){
   header('Location: panel.php');
   exit();
 }
-require_once '../HTML/logger.php';
+require_once '../logger.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,24 +16,22 @@ require_once '../HTML/logger.php';
     <meta name="description" content="Strona internetowa księgarni, możliwość zakupu produktów z asortymentu księgarni">
     <meta name="keywords" content="Księgarnia Książek, księgarnia, książki, bookstore, lektury, Wojna Makowa">
     <title>Księgarnia "Książek"</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/navigationBar.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/loginPage.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/sideBar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/navigationBar.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/loginPage.css">
+    <link rel="stylesheet" type="text/css" href="../../CSS/sideBar.css">
 </head>
 <body>
             <nav class="navbar">
                 <ul>
                 <li>
-            <form action="../HTML/SearchBar.php" method="get">
+            <form action="../SearchBar.php" method="get">
                 <input type="text" name="search" placeholder="Wyszukaj...">
                
             </form>
         </li>
-                    <li><a href="../homePage.php">Strona główna</a></li>
-                    <li><a href="../html/cart.php">Koszyk</a></li>
-                    <li>
-                    <a href="../HTML/login.php">Logowanie</a>
-                </li>
+        <li><a href="../../homePage.php">Strona główna</a></li>
+        <li><a href="../Cart files/cart.php">Koszyk</a></li>
+        <li><a href="../Login files/login.php">Logowanie</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,7 +40,7 @@ require_once '../HTML/logger.php';
 
     <head>
         <style type="text/css">
-  @import url('../CSS/login.css');
+  @import url('../../CSS/login.css');
     </style>
     </head>
     <div class="center">
@@ -61,7 +59,7 @@ require_once '../HTML/logger.php';
       
         <input type="submit" value="Zaloguj się">
         <div class="signup_link">
-          Nie posiadasz konta? <a href="../HTML/Registration.php">Zarejestruj się</a>
+          Nie posiadasz konta? <a href="../Login files/Registration.php">Zarejestruj się</a>
         </div>
       </form>
       <?php

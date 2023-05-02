@@ -39,7 +39,7 @@ class Category
                         <?php echo $row['Tytuł'] . "<br> " . $row['Cena'] . "zł"; echo "<br>"; ?>
                     </p>
                 </a>
-                <form method="post" action="../addToCart.php">
+                <form method="post" action="../Cart files/addToCart.php">
                     <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
                     <input type="hidden" name="tytul" value="<?php echo $row['Tytuł']; ?>">
                     <input type="hidden" name="cena" value="<?php echo $row['Cena']; ?>">
@@ -91,8 +91,8 @@ class Category
             </form>
         </li>
         <li><a href="../../homePage.php">Strona główna</a></li>
-        <li><a href="../../HTML/cart.php">Koszyk</a></li>
-        <li><a href="../../HTML/login.php">Logowanie</a></li>
+        <li><a href="../Cart files/cart.php">Koszyk</a></li>
+        <li><a href="../Login files/login.php">Logowanie</a></li>
     </ul>
 </nav>
 
@@ -106,8 +106,8 @@ class Category
     <meta charset="UTF-8">
     <title>Księgarnia "Książek"</title>
     <style type="text/css">
-   @import url('../CSS/navigationBar.css');
-    @import url('../CSS/sideBar.css');
+   @import url('../../CSS/navigationBar.css');
+    @import url('../../CSS/sideBar.css');
 </style>
 </head>
 <body>
