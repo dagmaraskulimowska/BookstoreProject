@@ -1,11 +1,8 @@
 <?php
 session_start();
-<<<<<<< Updated upstream:HTML/Login files/panel.php
-require_once '../logger.php';
-=======
+
 require_once '../HTML/logger.php';
 
->>>>>>> Stashed changes:HTML/panel.php
 ?>
 <!DOCTYPE html>
 <html lang="en">
