@@ -1,5 +1,5 @@
 <?php
-  require_once '../BookstoreProject/HTML/logger.php';
+  require_once 'HTML/logger.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +42,8 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
             </form>
         </li>
         <li><a href="homePage.php">Strona główna</a></li>
-                    <li><a href="HTML/Cart.php">Koszyk</a></li>
-                   <li> <a href="HTML/login.php">Logowanie</a> </li>
+                    <li><a href="HTML/Cart files/cart.php">Koszyk</a></li>
+                   <li> <a href="HTML/Login files/login.php">Logowanie</a> </li>
                 </li>
                 </ul>
             </nav>
@@ -93,7 +93,7 @@ $wynik = mysqli_query($database,"SELECT * FROM ksiazki WHERE Gatunek = 'Naukowe'
       <?php echo $row['Tytuł'] . "<br> " . $row['Cena'] . "zł"; echo "<br>"; ?>
     </p>
   </a>
-  <form method="post" action="../BookstoreProject/HTML/addToCart.php">
+  <form method="post" action="../BookstoreProject/HTML/Cart files/addToCart.php">
     <input type="hidden" name="id" value="<?php echo $row['ID']; ?>">
     <input type="hidden" name="tytul" value="<?php echo $row['Tytuł']; ?>">
     <input type="hidden" name="cena" value="<?php echo $row['Cena']; ?>">

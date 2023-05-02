@@ -16,6 +16,6 @@ if (isset($_POST['id'])) {
     }
 }
 
-header('Location: ../HTML/Cart.php');
+header('Location: cart.php');
 exit();
 ?>
