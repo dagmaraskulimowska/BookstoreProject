@@ -45,7 +45,7 @@ require_once '../logger.php';
 if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){
     echo '<br>'.$_SESSION['login'].'<br/><br><a href="logout.php">Wyloguj się</a>';
     if($_SESSION['login'] == "tomek1" || $_SESSION['login'] == "dagmara"){
-      echo '<br><a href="../HTML/CRUD Table/show.php">Panel Administracyjny</a>';
+      echo '<br><a href="../CRUD Table/show.php">Panel Administracyjny</a>';
     }
   }
   else{
