@@ -1,6 +1,11 @@
 <?php
 session_start();
+<<<<<<< Updated upstream:HTML/Login files/panel.php
 require_once '../logger.php';
+=======
+require_once '../HTML/logger.php';
+
+>>>>>>> Stashed changes:HTML/panel.php
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,8 +35,6 @@ require_once '../logger.php';
             </nav>
         </div>
 
-    <a href="../HTML/CRUD Table/show.php" class="center-link">Dodaj Książkę</a>
-
     <head>
         <style type="text/css">
   @import url('../../CSS/login.css');
@@ -41,14 +44,19 @@ require_once '../logger.php';
       <h1>Zalogowano jako: 
       <?php
 
+
 if(isset($_SESSION['logon']) && $_SESSION['logon'] == True){
-  echo '<br>'.$_SESSION['login'].'<br/><br><a href="logout.php">Wyloguj się</a>';
-}
-else{
-  $_SESSION['error'] = "Proszę się zalogować!";
-  header('Location: login.php');
-  exit();
-}
+    echo '<br>'.$_SESSION['login'].'<br/><br><a href="logout.php">Wyloguj się</a>';
+    if($_SESSION['login'] == "tomek1" || $_SESSION['login'] == "dagmara"){
+      echo '<br><a href="../HTML/CRUD Table/show.php">Panel Administracyjny</a>';
+    }
+  }
+  else{
+    $_SESSION['error'] = "Proszę się zalogować!";
+    header('Location: login.php');
+    exit();
+  }
+  
 ?>
 </h1>
 
