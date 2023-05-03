@@ -20,7 +20,7 @@ th, td {
 </head>
 <body>
 
-    <div class = "container">
+    <div class="container">
         <h2>Lista Książek</h2>
         <a class="btn btn-primary" href="create.php" role="button">Dodaj książkę</a>
         <br>
@@ -57,24 +57,25 @@ th, td {
 
             while($row = $result->fetch_assoc()){
                 echo "
-                <tr>
-                <tr id='row-{$row['ID']}'>
-                <td>$row[Okładka]</td>
-                <td>$row[Tytuł]</td>
-                <td>$row[Autor]</td>
-                <td>$row[Wydawnictwo]</td>
-                <td>$row[Liczbastron] . </td>
-                <td>$row[Seria]</td>
-                <td>$row[Tom]</td>
-                <td>$row[Gatunek]</td>
-                <td>$row[Cena]</td>
-                <td>
-                    <a class='btn btn-primary btn-sm' href='edit.php?id=$row[ID]'>Edytuj</a>
-                    <a class='btn btn-danger btn-sm delete-btn' data-id='$row[ID]'>Usuń</a>
-
-                </td>
-            </tr>";
-    }
+                    <tr id='row-{$row['ID']}'>
+                        <td>{$row['ID']}</td>
+                        <td>{$row['Okładka']}</td>
+                        <td>{$row['Tytuł']}</td>
+                        <td>{$row['Autor']}</td>
+                        <td>{$row['Wydawnictwo']}</td>
+                        <td>{$row['Liczbastron']}</td>
+                        <td>{$row['Seria']}</td>
+                        <td>{$row['Tom']}</td>
+                        <td>{$row['Gatunek']}</td>
+                        <td>{$row['Cena']}</td>
+                        <td>
+                            <a class='btn btn-primary btn-sm' href='edit.php?id={$row['ID']}'>Edytuj</a>
+                            <a class='btn btn-danger btn-sm delete-btn' data-id='{$row['ID']}'>Usuń</a>
+                        </td>
+                    </tr>
+                ";
+            }
+            
     ?>
 
 </tbody>

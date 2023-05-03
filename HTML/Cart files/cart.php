@@ -1,36 +1,23 @@
 <?php
 session_start();
 
-// Sprawdzenie czy koszyk istnieje w sesji
+
 if(!isset($_SESSION['koszyk'])) {
     $_SESSION['koszyk'] = array();
 }
 
 require_once '../logger.php';
+require_once '../navbarHTML.php';
+
+class cart extends navbarHTML {}
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Twój koszyk</title>
+<title>Księgarnia "Książek"</title>
     <link rel="stylesheet" type="text/css" href="../../CSS/navigationBar.css">
     <link rel="stylesheet" type="text/css" href="../../CSS/cart.css">
-</head>
 <body>
-
-<nav class="navbar">
-    <ul>
-    <li>
-    <form action="../SearchBar.php" method="get">
-                <input type="text" name="search" placeholder="Wyszukaj...">
-               
-            </form>
-        </li>
-        <li><a href="../../homePage.php">Strona główna</a></li>
-        <li><a href="../Cart files/cart.php">Koszyk</a></li>
-        <li><a href="../Login files/login.php">Logowanie</a></li>
-    </ul>
-</nav>
 
         <?php if(count($_SESSION['koszyk']) == 0): ?>
         <p id="empty-cart-message">Koszyk jest pusty</p>

@@ -8,10 +8,8 @@
   justify-items: end;
   width: 75%;
   height: 75%;
-  
 }
-
-.book {
+.grid-container .book {
   background-position: center center;
   text-align: center;
   border: 6px solid pink;
@@ -19,7 +17,7 @@
   padding: 10px;
   background: rgba(255, 255, 255, 0.4);
 }
-.btn_addtocart{
+.grid-container .book .btn_addtocart {
   width: 50%;
   height: 30px;
   border: 1px solid;
@@ -32,8 +30,8 @@
   outline: none;
   margin-top: 20px;
 }
-.btn_addtocart:hover{
+.grid-container .book .btn_addtocart:hover {
   border-color: rgba(196, 39, 39, 0.4);
   background: none;
-  transition: .5s;
-}
+  transition: 0.5s;
+}/*# sourceMappingURL=productTable.css.map */
