@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+require_once '../navbarHTML.php';
+
+class UsersCartData extends navbarHTML {}
+
 try {
     $connection = new mysqli("localhost", "root", "", "logowanie");
 
@@ -75,21 +79,6 @@ try {
 </head>
 <body>
 
-            <nav class="navbar">
-                <ul>
-                <li>
-            <form action="../HTML/SearchBar.php" method="get">
-                <input type="text" name="search" placeholder="Wyszukaj...">
-               
-            </form>
-        </li>
-        <li><a href="../../homePage.php">Strona główna</a></li>
-        <li><a href="../Cart files/cart.php">Koszyk</a></li>
-        <li><a href="../Login files/login.php">Logowanie</a></li>
-
-                </li>
-                </ul>
-            </nav>
             <div id="link-container">
             <a href="../Cart files/cart.php">Powrót do koszyka</a>
         <a href="../Mail files/sendEmail.php">Przejdź do płatności</a>

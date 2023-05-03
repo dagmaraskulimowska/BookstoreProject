@@ -1,7 +1,12 @@
 <?php
 session_start();
 require_once '../HTML/logger.php';
+
+require_once '../navbarHTML.php';
+
+class response extends navbarHTML {}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,19 +20,6 @@ require_once '../HTML/logger.php';
     <link rel="stylesheet" type="text/css" href="../../CSS/sideBar.css">
 </head>
 <body>
-            <nav class="navbar">
-                <ul>
-                <li>
-            <form action="../HTML/SearchBar.php" method="get">
-                <input type="text" name="search" placeholder="Wyszukaj...">
-               
-            </form>
-        </li>
-        <li><a href="../../homePage.php">Strona główna</a></li>
-        <li><a href="../Cart files/cart.php">Koszyk</a></li>
-        <li><a href="../Login files/login.php">Logowanie</a></li>
-                </ul>
-            </nav>
         </div>
 
 

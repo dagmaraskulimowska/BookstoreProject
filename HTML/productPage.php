@@ -2,6 +2,7 @@
 
 session_start();
 require_once '../HTML/logger.php';
+
 ?>
 
 <!DOCTYPE html>
