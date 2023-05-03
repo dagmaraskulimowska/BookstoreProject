@@ -14,4 +14,3 @@ if (isset($_POST['id'])) {
         echo "Error deleting record: " . $database->error;
     }
 }
-?>

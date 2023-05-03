@@ -1,18 +1,21 @@
 <?php
 
-class navbarHTML {}
+class navbarHTML
+{
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <nav class="navbar">
-<head>
 
-</head>
+    <head>
+
+    </head>
     <ul>
-    <li>
-    <form action="../SearchBar.php" method="get">
+        <li>
+            <form action="../SearchBar.php" method="get">
                 <input type="text" name="search" placeholder="Wyszukaj...">
-               
+
             </form>
         </li>
         <li><a href="../../homePage.php">Strona główna</a></li>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Sprawdzenie czy koszyk istnieje w sesji
+
 if(!isset($_SESSION['koszyk'])) {
     $_SESSION['koszyk'] = array();
 }

@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Pobierz dane z formularza
+   
     $id = $_POST['id'];
     $okladka = $_POST['okladka'];
     $tytul = $_POST['tytul'];
@@ -12,13 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $gatunek = $_POST['gatunek'];
     $cena = $_POST['cena'];
 
-    // Sprawdź, czy wszystkie wymagane pola zostały wypełnione
+   
     if (!$id || !$okladka || !$tytul || !$autor || !$wydawnictwo || !$liczba_stron || !$gatunek || !$cena) {
         echo "Wszystkie pola są wymagane!";
         exit();
     }
 
-    // Dodaj nową książkę do bazy danych
+    
     $database = new mysqli("localhost", "root", "", "bookstore");
 
     if ($database->connect_errno) {
@@ -34,8 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    // Przekieruj użytkownika z powrotem do strony głównej
+    
     header("Location: show.php");
     exit();
 }
-?>

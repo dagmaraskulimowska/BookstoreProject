@@ -30,7 +30,6 @@ require_once '../HTML/logger.php';
             <li><a href="../homePage.php">Strona główna</a></li>
             <li><a href="Cart Files/cart.php">Koszyk</a></li>
             <?php
-            // Wyświetlanie odpowiedniego linku w zależności od stanu sesji (zalogowany/nie zalogowany)
             if (isset($_SESSION['username'])) {
                 echo '<li><a href="Login files/logout.php">Wyloguj się</a></li>';
             } else {
@@ -41,7 +40,6 @@ require_once '../HTML/logger.php';
     </nav>
     <div class="product-container">
         <?php
-        // Połączenie z bazą danych
         $database = new mysqli("localhost", "root", "", "bookstore");
 
         if ($database->connect_errno) {
@@ -49,12 +47,10 @@ require_once '../HTML/logger.php';
             exit();
         }
 
-        // pobranie danych o produkcie na podstawie przekazanego ID
         $id = $_GET['id'];
         $sql = "SELECT * FROM ksiazki WHERE ID=$id";
         $result = $database->query($sql);
 
-        // wyświetlenie danych o produkcie
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<div class='product-image'><img src='" . $row['Okładka'] . "' alt='" . $row['Tytuł'] . "'></div>";
@@ -81,7 +77,7 @@ require_once '../HTML/logger.php';
             echo "Nie znaleziono produktu.";
         }
 
-        // Zakończ połączenie z bazą danych
+
         $database->close();
         ?>
     </div>

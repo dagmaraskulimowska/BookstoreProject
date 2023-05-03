@@ -103,7 +103,7 @@ try {
               exit();
             }
 
-             // WYŚWIETLANIE DANYCH W TEXT BOXACH
+             
              if (mysqli_num_rows($reply) > 0) {
                 $row = mysqli_fetch_assoc($reply);
                 echo '<div class="center">';

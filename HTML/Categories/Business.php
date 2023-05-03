@@ -5,12 +5,12 @@ require_once 'Category.php';
 
 class Business extends Category
 {
-    
-    public function __construct() {
-        parent::__construct();
-        $this->category = 'Biznes';
-      }
 
+  public function __construct()
+  {
+    parent::__construct();
+    $this->category = 'Biznes';
+  }
 }
 $Business = new Business();
 $Business->displayBooks();

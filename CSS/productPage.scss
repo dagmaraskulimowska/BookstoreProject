@@ -4,7 +4,7 @@ body {
   background: $body-background-image no-repeat center center fixed;
   background-size: cover;
 
-  // Stylowanie kontenera produktu
+
   .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +12,7 @@ body {
     margin-top: 13%;
     margin-left: 15%;
 
-    // Stylowanie obrazka produktu
+
     .product-image {
       margin-right: 20px;
       margin-bottom: 20px;
@@ -23,7 +23,7 @@ body {
       }
     }
 
-    // Stylowanie szczegółów produktu
+
     .product-details {
       width: 400px;
 
@@ -46,7 +46,7 @@ body {
       }
     }
 
-    // Stylowanie przycisku dodania do koszyka
+
     .btn_addtocart {
       width: 50%;
       height: 30px;
@@ -68,7 +68,7 @@ body {
     }
   }
 
-  // Stylowanie stopki
+
   footer {
     background-color: #eee;
     text-align: center;
