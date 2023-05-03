@@ -53,4 +53,3 @@ $connection->close();
 $_SESSION['koszyk'] = array();
 
 header("Location: ./response.php");
-?>
