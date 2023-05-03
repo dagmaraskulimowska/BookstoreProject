@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../HTML/logger.php';
+require_once '../logger.php';
 
 require_once '../navbarHTML.php';
 
@@ -34,7 +34,6 @@ class response extends navbarHTML {}
     </style>
     </head>
     <div class="center">
-      <p>Mail został wysłany na podany adres email: </p>
 
 
       <?php

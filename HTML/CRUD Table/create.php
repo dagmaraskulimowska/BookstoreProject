@@ -52,7 +52,7 @@ th, td {
 		<label>Cena:</label>
 		<input type="text" name="cena"><br>
 
-		<a class='btn btn-primary btn-sm' href='edit.php?id=$row[ID]'>Dodaj książkę</a>
+		<button type="submit" class='btn btn-primary btn-sm'>Dodaj książkę</button>
 	</form>
 </div>
 </body>

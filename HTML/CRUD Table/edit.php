@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tytul = $_POST["tytul"];
     $autor = $_POST["autor"];
     $wydawnictwo = $_POST["wydawnictwo"];
-    $liczbastron = $_POST["liczbastron"]; // poprawiono nazwę pola
+    $liczbastron = $_POST["liczbastron"];
     $seria = $_POST["seria"];
     $tom = $_POST["tom"];
     $gatunek = $_POST["gatunek"];
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
 
-    $sql = "SELECT * FROM ksiazki WHERE ID = $id";
+    $sql = "SELECT * FROM ksiazki WHERE id = $id";
     $result = $database->query($sql);
 
     if (!$result) {
@@ -104,8 +104,8 @@ if (isset($_GET["id"])) {
                 <label for="cena">Cena:</label>
                 <input type="text" id="cena" name="cena" value="<?php echo $cena; ?>"><br>
             
-            <input type="hidden" name="id" value="<?php echo $id; ?>">
-            <a class='btn btn-primary btn-sm' href='edit.php?id=$row[ID]'>Zapisz</a>
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                <button type="submit" class='btn btn-primary btn-sm'>Dodaj książkę</button>
         </form>
     </div>
 </body>

@@ -1,0 +1,40 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    background-color: rgba(196, 39, 39, 0.4);
+    overflow-x: hidden;
+    padding-top: 20px;
+    
+    h1 {
+    text-align: center;
+    color: white;
+    }
+    
+    .menu {
+    margin-top: 20px;
+    display: flex;
+
+    .menu-column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      
+        .menu-item {
+          display: block;
+          padding: 10px;
+          color: white;
+          text-decoration: none;
+          transition: background-color 0.3s;
+      
+          &:hover {
+            background-color: rgba(255, 0, 0, 0.49);
+          }
+        }
+      }
+    }
+}      
